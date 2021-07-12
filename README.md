@@ -5,11 +5,15 @@ If a user like a particular restaurant, they can add to their wishlist, and also
 I want to use google places API to add restaurants from different locations but i'm having issue with it.
 This app is still `In Progress`, there are many features that still needs to be added to it.
 
-`Technologies`
+`Technologies` <br>
 Embedded JS, Nodejs, ExpressJS
 
-`Tools & Infrastructure`
+`Tools & Infrastructure` <br>
 Git/Github
 
-`API`
+`API` <br>
 Yelp API
+
+#Run <br>
+npm install <br>
+node index.js
