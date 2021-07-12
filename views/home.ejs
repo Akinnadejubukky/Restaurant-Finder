@@ -1,0 +1,51 @@
+<%include ./partials/header%>
+<%include ./partials/navbar%>
+<style>
+    html{
+        background-image: linear-gradient(rgba(9, 68, 57, 0.981), rgba(38, 27, 59, 0)), url("../img/home.jpg");
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4 col-md-2"></div>
+        <div class="col-lg-4 col-md-8">
+            <form method="get" action="/search">
+            <div class="input-group centerSearchBar">
+                <div class="input-group-prepend">
+                    <div class="input-group-text bg-white searchIcon">
+                        <i class="fa fa-search ml-2"></i>
+                    </div>
+                </div>
+                <input type="hidden" id="lat" name="lat" value="NA">
+                <input type="hidden" id="lon" name="lon" value="NA">
+                    <input type="search" class="form-control form-control-lg searchBar" name="query" placeholder="Search your restaurant">
+            </div>
+                <div class="input-group mt-3">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text bg-white searchIcon">
+                            <i class="fa fa-building"></i>
+                        </div>
+                    </div>
+                    <input type="text" class="form-control form-control-lg searchBar" name="city" placeholder="Your current City">
+                </div>
+                <button class="btn btn-primary mt-3" style="width: 100%">Search</button>
+            </form>
+        </div>
+        <div class="col-lg-2 col-md-2"></div>
+    </div>
+</div>
+<script type="text/javascript">
+
+    if ("geolocation" in navigator) {
+        /* geolocation is available */
+        navigator.geolocation.getCurrentPosition(function(position) {
+            document.getElementById("lat").value=""+position.coords.latitude;
+            document.getElementById("lon").value=""+position.coords.longitude
+        });
+    }
+</script>
+<%include ./partials/footer%>

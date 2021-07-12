@@ -1,0 +1,29 @@
+<%include partials/header%>
+<%include partials/navbarLight%>
+<style>
+    body {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.774), rgba(0, 0, 0, 0.671)), url("../img/wish4.jpeg");
+    }
+</style>
+<div class="container">
+    <h3 class="text-center mt-5" style="font-family: 'Times New Roman', Times, serif, Tahoma, Geneva, Verdana, sans-serif; color: white;">Hey ! looks like we have met before !</h3>
+    <div class="row">
+        <div class="col-lg-4 col-md-4"></div>
+        <div class="col-lg-4 col-md-4">
+            <form class="mt-4" action="/login" method="post">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="username" id="username" placeholder="Enter username">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+                </div>
+                <center><button type="submit" class="btn btn-primary" style="width: 100%">Login</button><br>
+                <a href="/register" style="color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Don't  have  an  account? Sign  up</a> </center>
+
+            </form>
+        </div>
+        <div class="col-lg-4 col-md-4"></div>
+
+    </div>
+</div>
+<%include partials/footer%>

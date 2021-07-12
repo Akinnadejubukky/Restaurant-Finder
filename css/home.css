@@ -1,0 +1,56 @@
+.centerSearchBar{
+    margin-top: 20%;
+}
+.searchIcon{
+    border-right: none;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    color: rgb(33, 33, 218);
+}
+.searchBar{
+    border-left: none;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.imageSlideShow{
+    height: 400px;
+    width: 100%;
+    overflow: fragments;
+}
+
+.nav-link {
+    background-color: white;
+    border-radius: 5px;
+    font-style: unset;
+    color: black !important;
+    margin: 0.5rem;
+}
+
+.navbar-brand {
+    color: rgb(13, 158, 158) !important;
+    font-family: fantasy;
+}
+
+.nav-style {
+    background: transparent;
+    border: none;
+}
+
+.btn {
+    animation: active-background 5s infinite;
+}
+
+@keyframes active-background {
+    0% {
+        background-color: rgb(21, 21, 105);
+    }
+    25% {
+        background-color: rgba(0, 0, 0, 0.479);
+    }
+    50% {
+        background-color: rgba(255, 255, 255, 0.212);
+    }
+    100% {
+        background-color: rgba(255, 255, 255, 0.349);
+    }
+}

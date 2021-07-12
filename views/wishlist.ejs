@@ -1,0 +1,51 @@
+<% include ./partials/header %>
+<% include ./partials/navbarLight %>
+<style>
+    body {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.664), rgba(0, 0, 0, 0.212)), url("../img/list4.jpeg");
+    }
+</style>
+<div class="container">
+    <h3 class="mt-4; text-center" style="color: white ;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Your bucket list full of delicious places with good meal</h3>
+    <div class="row">
+        <% restaurents.forEach(function (restro) { %>
+        <div class="col-lg-3 col-md-4 col-sm-6 d-flex align-items-stretch mt-4">
+            <div class="card" style="display: flex;flex-wrap: wrap">
+                <div style="height: 200px;width: 100%;overflow: hidden">
+                    <a href="/view/<%= restro.id %>">
+                        <img class="card-img-top"
+                        <% if(!restro.image_url || restro.image_url == ""){ %>
+                             src="https://media-cdn.tripadvisor.com/media/photo-s/0e/cc/0a/dc/restaurant-chocolat.jpg"
+                        <% }else{ %>
+                             src="<%= restro.image_url %>"
+                                <% } %>     
+                    </a>
+                </div>
+                <div class="card-body">
+                    <a href="/view/<%= restro.id %>" class="text-decoration-none"><h5
+                                class="text-dark"><%= restro.name %></h5></a>
+                    <p>
+                        <i class="fas fa-map-marker-alt text-danger"></i>&nbsp;&nbsp;<%= restro.location.display_address %>
+                        <br>
+                        <i class="fas fa-money-bill-wave text-success"></i>&nbsp;&nbsp;
+                        <% if(!restro.price){ %>
+                            $
+                        <% }else{ %>
+                            <%= restro.price %>
+                        <% } %>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <i class="fas fa-star text-warning"></i>
+                        &nbsp;&nbsp;<%= restro.rating %>/5
+                    </p>
+                    <form method="post" action="/wishlist/delete/<%= restro.id %>">
+                        <button class="btn btn-sm btn-danger text-white"><i class="fas fa-ban"></i>&nbsp;&nbsp;Not
+                            interested anymore?
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <% }) %>
+    </div>
+</div>
+<% include ./partials/footer %>

@@ -1,0 +1,21 @@
+.navBarLatoFonts{
+    font-family: 'Lato', sans-serif;
+}
+html, body {
+    height: 100%;
+    background-size: cover;
+    background:url("") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.cardHover:hover{
+    transform: scale(1.08, 1.07);
+    -moz-transform:  scale(1.08, 1.07);
+    -ms-transform:  scale(1.08, 1.07);
+    -webkit-transform: scale(1.08, 1.07);
+    -o-transform:  scale(1.08, 1.07);
+    transition: 0.3s;
+}
+
